@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'images/index'
   get 'images/show'
   get 'images/new'
