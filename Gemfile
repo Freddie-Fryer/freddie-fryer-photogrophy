@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gems added by Freddie
 gem 'devise'
+gem 'font-awesome-sass'
+gem 'simple_form'
+gem 'autoprefixer-rails'
