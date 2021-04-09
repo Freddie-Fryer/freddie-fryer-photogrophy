@@ -7,11 +7,7 @@ Rails.application.routes.draw do
   get 'images/edit'
   get 'images/update'
   get 'images/destroy'
-  get 'index/show'
-  get 'index/new'
-  get 'index/create'
-  get 'index/edit'
-  get 'index/update'
-  get 'index/destroy'
+
+  root to: 'images#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
