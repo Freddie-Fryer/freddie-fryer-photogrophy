@@ -1,2 +1,26 @@
 <h1>Images#new</h1>
-<p>Find me in app/views/images/new.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h2>Add new Image</h2>
+
+      <%= simple_form_for @image do |f| %>
+        <div class="form-inputs">
+          <%= f.input :photo, as: :file,
+                      required: true %>
+          <%= f.input :title %>
+          <%= f.input :date, as: :date %>
+          <%= f.input :time, as: :time %>
+          <%= f.input :aperature %>
+          <%= f.input :speed %>
+          <%= f.input :iso %>
+          <%= f.input :camera %>
+          <%= f.input :info, as: :text %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "add image", class: "edit-button" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
