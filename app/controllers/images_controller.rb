@@ -38,6 +38,6 @@ class ImagesController < ApplicationController
 
   def image_params
     params.require(:image).permit(:title, :date, :time, :aperature, :speed,
-      :iso, :camera, :info, :photo)
+      :iso, :camera, :info, :photo, :project_id)
   end
 end
