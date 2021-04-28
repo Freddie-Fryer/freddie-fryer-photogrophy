@@ -1,7 +1,8 @@
 class ImagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @images = Image.all
+    @blog_project = Project.find_by title: "Blog"
+    @images = @blog_project.images
   end
 
   def show
