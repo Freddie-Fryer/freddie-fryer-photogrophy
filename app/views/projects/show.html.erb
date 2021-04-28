@@ -1,3 +1,12 @@
 <h1><%= @project.title %></h1>
 <p>Find me in app/views/projects/show.html.erb</p>
 <p><%= link_to "Add new photo", new_image_path %></p>
+<p><%= link_to "Edit project", edit_project_path %></p>
+<p><%= link_to "Delete project", project_path, method: :delete, data: { confirm: "Are you sure you want to delete #{@project.title} and all its images?" } %></span><p>
+<% if @images.blank? %>
+  There are no images.
+<% else %>
+  <% @images.each do |image| %>
+    <%= cl_image_tag image.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+<% end %>
