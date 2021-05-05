@@ -4,7 +4,7 @@
   There are no images.
 <% else %>
   <% @images.each do |image| %>
-    <%= cl_image_tag image.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= render 'shared/index_card', image: image %>
   <% end %>
 <% end %>
 
