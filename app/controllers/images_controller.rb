@@ -38,7 +38,7 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:title, :date, :time, :aperature, :speed,
+    params.require(:image).permit(:title, :orientation, :date, :time, :aperature, :speed,
       :iso, :camera, :info, :photo, :project_id)
   end
 end
