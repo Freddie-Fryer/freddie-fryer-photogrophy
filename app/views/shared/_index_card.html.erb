@@ -1,8 +1,14 @@
 <div class="i-card">
 
-  <div class="i-card-img">
-    <%= cl_image_tag image.photo.key, height: 300, width: 200, crop: :fill %>
-  </div>
+  <% if image.orientation == "Portrait" %>
+    <div class="i-card-img">
+      <%= cl_image_tag image.photo.key, height: 300, width: 200, crop: :fill %>
+    </div>
+  <% else %>
+    <div class="i-card-img">
+      <%= cl_image_tag image.photo.key, height: 200, width: 300, crop: :fill %>
+    </div>
+  <% end %>
 
   <div class="i-card-info">
     <p class="i-card-title"><%= image.title %></p>
